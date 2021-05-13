@@ -1,1 +1,1 @@
-# PromptJs
+# Prompt
