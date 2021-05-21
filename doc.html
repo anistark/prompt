@@ -10,6 +10,11 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/doc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
 </head>
 
 <body>
@@ -26,8 +31,8 @@
         <aside class="doc__nav">
             <ul>
                 <li class="js-btn selected">Get Started</li>
-                <!-- <li class="js-btn">Configuration</li> -->
-                <!-- <li class="js-btn">Keybindings</li> -->
+                <li class="js-btn">Configuration</li>
+                <li class="js-btn">Usage</li>
                 <li class="js-btn">Issues</li>
             </ul>
         </aside>
@@ -37,11 +42,11 @@
                 <p>Learn how to configure settings for Prompt, such as your syntax highlighting preference and the default saving folder location.</p>
                 <h3 class="section__title">Installation</h3>
                 <div class="code__block code__block--notabs">
-                    <pre class="code code--block">
-              <code>
-                $ npm install prompt --save
-              </code>
-            </pre>
+                    <pre>
+                        <code class="shell">
+$ npm install prompt --save
+                        </code>
+                    </pre>
                 </div>
             </section>
             <section class="js-section">
@@ -56,12 +61,12 @@
                     <tr>
                         <td>title</td>
                         <td>Title of the Notification</td>
-                        <td></td>
+                        <td>null</td>
                     </tr>
                     <tr>
                         <td>text</td>
                         <td>Text of the notification. Usually can be used to add more descriptive message to the title</td>
-                        <td></td>
+                        <td>null</td>
                     </tr>
                     <tr>
                         <td>type</td>
@@ -74,20 +79,30 @@
                         <td>∞</td>
                     </tr>
                 </table>
-                <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius te, ad vel affert oportere
-                    reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates suavitate vituperatoribus.</p>
+                <!-- <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius te, ad vel affert oportere reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates suavitate vituperatoribus.</p> -->
                 <hr />
             </section>
-            <!-- <section class="js-section">
-                <h3 class="section__title">Keybindings</h3>
-                <p>Lorem ipsum dolor sit amet, scripta tibique indoctum sit ei, mel inani aeterno ad. Facer oratio ex per. At eam movet verear, in sea brute patrioque disputando, usu nonumes torquatos an. Ex his quaerendum intellegebat, ut vel homero accusam.
-                    Eum at debet tibique, in vocibus temporibus adversarium sed. Porro verear eu vix, ne usu tation vituperata.</p>
-                <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius te, ad vel affert oportere
-                    reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates suavitate vituperatoribus.</p>
-                <p>Malis percipitur an pro. Pro aperiam persequeris at, at sonet sensibus mei, id mea postulant definiebas concludaturque. Id qui malis abhorreant, mazim melius quo et. At eam altera dolorum, case dicant lobortis ius te, ad vel affert oportere
-                    reprehendunt. Quo no verterem deseruisse, mea brute postea te, ne per tacimates suavitate vituperatoribus.</p>
+            <section class="js-section">
+                <h3 class="section__title">Usage</h3>
+                <p>First you need import the library files to your client base.</p>
+                <pre>
+                    <code class="html">
+&lt;link rel="stylesheet" href="/node_modules/promptjs/dist/prompt.css"&gt;
+&lt;script src="/node_modules/promptjs/dist/prompt.js"&gt;&lt;/script&gt;
+                    </code>
+                </pre>
+                <pre>
+                    <code class="javascript">
+Prompt.create({
+    title: document.getElementById("title").value || null,
+    text: document.getElementById("text").value || null,
+    type: document.getElementById("type").value || null,
+    timeout: document.getElementById("timeout").value || null
+});
+                    </code>
+                </pre>
                 <hr />
-            </section> -->
+            </section>
             <section class="js-section">
                 <h3 class="section__title">Issues</h3>
                 <p>If you are facing any issues, feel free to open an issue on the <a href="https://github.com/anistark/prompt/issues">Github Issue Tracker</a>. Make sure to go through existing issues in case your concern is shared by others as well.</p>
@@ -96,10 +111,6 @@
     </div>
 
     <footer class="footer">Prompt is an open-source free to use tool for any web developer maintained by <a href="" target="_blank" class="link link--light">Ani</a>.</footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script>
-        hljs.initHighlightingOnLoad();
-    </script>
     <script src="js/main.js"></script>
 </body>
 
