@@ -178,3 +178,9 @@ nav {
     font-size: 0.8rem;
   }
 }
+
+.subtitle {
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+}
