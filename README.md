@@ -4,6 +4,8 @@ v1.0.0
 
 A web app notification plugin to easily integrate and get going.
 
+![Prompt](https://anistark.github.io/prompt/img/prompt.png "Prompt")
+
 [Demo](https://anistark.github.io/prompt/)
 
 Documentation:
