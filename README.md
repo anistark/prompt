@@ -8,14 +8,14 @@ A web app notification plugin to easily integrate and get going.
 
 Documentation:
 
-Install: `npm install promptjs`
+Install: `npm install promptjs --save`
 
 Usage:
 
 Import both these files on client side:
-```
-node_modules/promptjs/dist/prompt.js
-node_modules/promptjs/dist/prompt.css
+```html
+<link rel="stylesheet" href="/node_modules/promptjs/dist/prompt.css">
+<script src="/node_modules/promptjs/dist/prompt.js"></script>
 ```
 
 Trigger from js:
