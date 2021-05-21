@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/landing.css">
 
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/anistark/prompt/main/dist/prompt.css">
-    <script src="https://raw.githubusercontent.com/anistark/prompt/main/dist/prompt.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/form.css">
+
+    <link rel="stylesheet" href="https://anistark.github.io/prompt/css/prompt.css">
+    <script src="https://anistark.github.io/prompt/js/prompt.js"></script>
 </head>
 
 <body>
@@ -145,12 +147,74 @@
         </div>
     </div> -->
 
+
+    <div class="form-container">
+        <div class="form-group">
+            <label id="title-label" for="title" class="label">Title : </label>
+            <input type="text" name="title" id="title" class="inset-input" placeholder="Enter your Notification Title" value="Prompt" required />
+        </div>
+        <div class="form-group">
+            <p class="label">Text</p>
+            <textarea id="text" class="inset-input input-textarea" name="text" placeholder="Enter your comment here...">This is a sample Notification!</textarea>
+        </div>
+        <div class="form-group">
+            <label class="label">Type:</label>
+            <select id="type" name="dropdown" class="inset-input" required>
+                <option id="select-option" disabled value>Select type of Notification</option>
+                <option id="select-itmgm" value="info">Info</option>
+                <option id="select-ittech" selected value="success">Success</option>
+                <option id="select-nonit" value="warning">Warning</option>
+                <option id="select-nonit" value="error">Error</option>
+            </select>
+        </div>
+        <!-- <div class="form-group">
+            <p class="label">What would you like to watch in our stream?</p>
+            <label class="left-aligned">
+                <input name="stream-choice" value="fs-coding" type="radio" class="inset-radio" checked />Full stack coding</label>
+            <label class="left-aligned">
+                <input name="stream-choice" value="end-to-end" type="radio" class="inset-radio" />End to end process</label>
+
+            <label class="left-aligned"><input name="stream-choice" value="devops" type="radio" class="inset-radio" />DevOps Stuff</label>
+            <label class="left-aligned"><input name="stream-choice" value="frontend" type="radio" class="inset-radio" />Frontend Stuff</label>
+            <label class="left-aligned"><input name="stream-choice" value="backend" type="radio" class="inset-radio" />Backend Stuff</label>
+        </div> -->
+        <!-- <div class="form-group">
+            <p class="label">
+                What other format would you prefer the content in?
+            </p>
+
+            <label class="left-aligned"><input name="content-choice" value="blogs" type="checkbox" class="inset-radio" />Blogs</label>
+            <label class="left-aligned"><input name="content-choice" value="yt" type="checkbox" class="inset-radio" />Youtube Videos</label>
+            <label class="left-aligned"><input name="content-choice" value="tutorials" type="checkbox" class="inset-radio" />Tutorials</label>
+            <label class="left-aligned"><input name="content-choice" value="news-letter" type="checkbox" class="inset-radio" />News letters</label>
+        </div> -->
+        <div class="form-group">
+            <label id="title-label" for="title" class="label">Timeout: </label>
+            <input type="text" name="timeout" id="timeout" class="inset-input" placeholder="timeout(ms)" value="4500" required />
+        </div>
+        <div>
+            <button class="submit-button" onclick="create()">Submit</button>
+        </div>
+    </div>
+    </div>
+
     <footer class="footer">Prompt is an open-source free to use tool for any web developer maintained by <a href="https://github.com/anistark" target="_blank" class="link link--light">Ani</a>.</footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script>
         hljs.initHighlightingOnLoad();
     </script>
     <script src="js/main.js"></script>
+    <script type="text/javascript">
+        function create() {
+            Prompt.create({
+                title: document.getElementById("title").value || null,
+                text: document.getElementById("text").value || null,
+                type: document.getElementById("type").value || null,
+                // icon: document.body.querySelector('input[name="icon"]').value || null,
+                timeout: document.getElementById("timeout").value || null
+            });
+        }
+    </script>
 </body>
 
 </html>

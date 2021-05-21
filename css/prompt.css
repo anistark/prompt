@@ -65,15 +65,15 @@
 }
 
 .prompt-warning {
-    border-bottom: 2px solid #DB9215;
+    border-bottom: 5px solid #DB9215;
 }
 
 .prompt-error {
-    border-bottom: 2px solid #DB2B1D;
+    border-bottom: 5px solid #DB2B1D;
 }
 
 .prompt-info {
-    border-bottom: 2px solid #27ABDB;
+    border-bottom: 5px solid #27ABDB;
 }
 
 @keyframes Prompt {
