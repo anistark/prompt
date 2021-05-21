@@ -31,5 +31,9 @@ Prompt.create({
 });
 ```
 
+Screenshot:
+<img src="https://anistark.github.io/prompt/img/screenshot.png" alt="Screenshot" height="100"/>
+
+
 
 Inspired by [VanillaToasts](https://github.com/AlexKvazos/VanillaToasts).
