@@ -9,19 +9,19 @@ A web app notification plugin to easily integrate and get going.
 
 [Demo](https://anistark.github.io/prompt/)
 
-Documentation:
+## Documentation:
 
-Install: `npm install promptjs --save`
+### Install: `npm install promptjs --save`
 
-Usage:
+### Usage:
 
-Import both these files on client side:
+#### Import both these files on client side:
 ```html
 <link rel="stylesheet" href="/node_modules/promptjs/dist/prompt.css">
 <script src="/node_modules/promptjs/dist/prompt.js"></script>
 ```
 
-Trigger from js:
+#### Trigger from js:
 ```javascript
 Prompt.create({
     title: "Title",
@@ -31,7 +31,7 @@ Prompt.create({
 });
 ```
 
-Screenshot:
+#### Screenshot:
 <img src="https://anistark.github.io/prompt/img/screenshot.png" alt="Screenshot" height="100"/>
 
 
