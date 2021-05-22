@@ -13,15 +13,35 @@ A web app notification plugin to easily integrate and get going.
 
 ### Install: `npm install promptjs --save`
 
+### Update: `npm update promptjs --save`
+Update to the latest version of the library to catch up with new features.
+
 ### Usage:
 
-#### Import both these files on client side:
+#### Import:
+
+1. If you're running this on reactjs/vuejs/angular sort of framework, you can directly use require.
+Alternatively, if you've browerify or requirejs in your project, you can import directly from `node_modules`:
+```javascript
+require('promptjs')
+```
+Don't forget to add the stylesheet:
 ```html
 <link rel="stylesheet" href="/node_modules/promptjs/dist/prompt.css">
-<script type="text/javascript" src="/node_modules/promptjs/dist/prompt.js"></script>
 ```
 
-#### Trigger from js:
+2. If not, copy them to your client side vendor directory like:
+```
+cp -r node_modules/promptjs statics/vendor/
+```
+where `statics` is my client side static directory (Yours might have some equivalent name. Add accordingly).
+And then add these lines to your client side view or html file:
+```html
+<link rel="stylesheet" href="/static/vendor/promptjs/dist/prompt.css">
+<script type="text/javascript" src="/static/vendor/promptjs/dist/prompt.js"></script>
+```
+
+#### Trigger:
 ```javascript
 Prompt.create({
     title: "Title",
@@ -34,6 +54,6 @@ Prompt.create({
 #### Screenshot:
 <img src="https://anistark.github.io/prompt/img/screenshot.png" alt="Screenshot" height="100"/>
 
-
+***
 
 Inspired by [VanillaToasts](https://github.com/AlexKvazos/VanillaToasts).
