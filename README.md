@@ -18,7 +18,7 @@ A web app notification plugin to easily integrate and get going.
 #### Import both these files on client side:
 ```html
 <link rel="stylesheet" href="/node_modules/promptjs/dist/prompt.css">
-<script src="/node_modules/promptjs/dist/prompt.js"></script>
+<script type="text/javascript" src="/node_modules/promptjs/dist/prompt.js"></script>
 ```
 
 #### Trigger from js:
