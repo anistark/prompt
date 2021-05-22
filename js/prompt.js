@@ -1,3 +1,5 @@
+var promptContainer;
+
 (function(root, factory) {
     // commonjs
     if (typeof exports === 'object') {
@@ -18,9 +20,9 @@
     // Initialize library
     function init() {
         // Toast container
-        var container = document.createElement('div');
-        container.id = 'prompt-container';
-        document.body.appendChild(container);
+        promptContainer = document.createElement('div');
+        promptContainer.id = 'prompt-container';
+        document.body.appendChild(promptContainer);
     }
 
     var Prompt = {};
@@ -74,6 +76,13 @@
 
         if (options.type) {
             toast.className += ' prompt-' + options.type;
+        }
+
+        if (options.position) {
+            promptContainer.className += ' prompt-' + options.position;
+        }
+        else {
+            promptContainer.className += ' prompt-top-right';
         }
 
         toast.addEventListener('click', toast.hide);

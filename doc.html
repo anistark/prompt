@@ -72,7 +72,12 @@ $ npm install prompt --save
                     <tr>
                         <td>type</td>
                         <td>Type of Notification. Ex: success, info, warning, error.</td>
-                        <td>info</td>
+                        <td>default</td>
+                    </tr>
+                    <tr>
+                        <td>position</td>
+                        <td>Position of where you'd want the notification to come at.</td>
+                        <td>Top Right</td>
                     </tr>
                     <tr>
                         <td>timeout</td>
@@ -95,10 +100,11 @@ $ npm install prompt --save
                 <pre>
                     <code class="javascript">
 Prompt.create({
-    title: document.getElementById("title").value || null,
-    text: document.getElementById("text").value || null,
-    type: document.getElementById("type").value || null,
-    timeout: document.getElementById("timeout").value || null
+    title: "Title",
+    text: "Notification Text",
+    type: "success",
+    position: "top-right",
+    timeout: 3000
 });
                     </code>
                 </pre>

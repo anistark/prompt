@@ -15,8 +15,8 @@
 
     <link rel="stylesheet" href="css/form.css">
 
-    <link rel="stylesheet" href="https://anistark.github.io/prompt/css/prompt.css">
-    <script src="https://anistark.github.io/prompt/js/prompt.js"></script>
+    <link rel="stylesheet" href="css/prompt.css">
+    <script src="js/prompt.js"></script>
 </head>
 
 <body>
@@ -157,12 +157,23 @@
         </div>
         <div class="form-group">
             <label class="label">Type:</label>
-            <select id="type" name="dropdown" class="inset-input" required>
-                <option id="select-option" disabled value>Select type of Notification</option>
-                <option id="select-itmgm" value="info">Info</option>
-                <option id="select-ittech" selected value="success">Success</option>
-                <option id="select-nonit" value="warning">Warning</option>
-                <option id="select-nonit" value="error">Error</option>
+            <select id="type" name="type" class="inset-input" required>
+                <option id="select-type" disabled value>Select type of Notification</option>
+                <option id="select-info" value="info">Info</option>
+                <option id="select-success" selected value="success">Success</option>
+                <option id="select-warning" value="warning">Warning</option>
+                <option id="select-error" value="error">Error</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="label">Position:</label>
+            <select id="position" name="position" class="inset-input" required>
+                <option id="select-position" disabled value>Select position of Notification</option>
+                <option id="select-top-right" selected value="top-right">Top Right</option>
+                <option id="select-top-left" value="top-left">Top Left</option>
+                <option id="select-bottom-right" value="bottom-right">Bottom Right</option>
+                <option id="select-bottom-left" value="bottom-left">Bottom Left</option>
             </select>
         </div>
         <!-- <div class="form-group">
@@ -208,6 +219,7 @@
                 title: document.getElementById("title").value || null,
                 text: document.getElementById("text").value || null,
                 type: document.getElementById("type").value || null,
+                position: document.getElementById("position").value || null,
                 // icon: document.body.querySelector('input[name="icon"]').value || null,
                 timeout: document.getElementById("timeout").value || null
             });
