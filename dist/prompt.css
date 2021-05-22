@@ -1,7 +1,4 @@
 #prompt-container {
-    position: fixed;
-    top: 0;
-    right: 0;
     width: 320px;
     font-family: 'Helvetica';
 }
@@ -58,7 +55,7 @@
     text-decoration: none !important;
 }
 
-/** toast types */
+/** prompt types */
 
 .prompt-success {
     border-bottom: 5px solid #51C625;
@@ -74,6 +71,33 @@
 
 .prompt-info {
     border-bottom: 5px solid #27ABDB;
+}
+
+
+/** prompt position  */
+.prompt-top-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.prompt-bottom-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+
+.prompt-bottom-left {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.prompt-top-left {
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 @keyframes Prompt {

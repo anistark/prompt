@@ -47,6 +47,7 @@ Prompt.create({
     title: "Title",
     text: "Text",
     type: "success",
+    position: "top-right",
     timeout: "5000"  // 5s
 });
 ```
