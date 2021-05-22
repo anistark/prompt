@@ -56,4 +56,9 @@ Prompt.create({
 
 ***
 
+Contributions Welcome.
+Feel free to open an issue with a feature request or bug report and work on it. Assign it to yourself so that nobody else takes it up.
+
+***
+
 Inspired by [VanillaToasts](https://github.com/AlexKvazos/VanillaToasts).
