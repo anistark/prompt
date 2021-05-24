@@ -1,7 +1,8 @@
 # Prompt
 
-![GitHub package.json version](https://img.shields.io/github/package-json/v/anistark/prompt) ![npm](https://img.shields.io/npm/v/promptjs)
-![GitHub](https://img.shields.io/github/license/anistark/prompt)
+[![npm](https://img.shields.io/npm/v/promptjs)](https://www.npmjs.com/package/promptjs)
+[![npm](https://img.shields.io/npm/dm/promptjs)](https://www.npmjs.com/package/promptjs)
+[![GitHub](https://img.shields.io/github/license/anistark/prompt)](./LICENSE)
 
 A web app notification plugin to easily integrate and get going.
 
